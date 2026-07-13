@@ -6,7 +6,7 @@ from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 def main_menu(page: int = 1) -> InlineKeyboardMarkup:
     pages = {
         1: [
-            ("🏦 Баланс", "bank:balance"),
+            ("🏦 Мой счет", "bank:balance"),
             ("💸 Перевод", "bank:transfer"),
             ("🏛 Казна", "treasury:menu"),
             ("🎰 Казино", "casino:menu"),
@@ -14,11 +14,11 @@ def main_menu(page: int = 1) -> InlineKeyboardMarkup:
         2: [
             ("📜 Лицензии", "licenses:menu"),
             ("📦 Инвентарь", "inventory:page:1"),
-            ("📈 Статистика", "profile:stats"),
+            ("📈 Операции", "profile:stats"),
             ("⚙ Настройки", "profile:settings"),
         ],
         3: [
-            ("👤 Профиль", "profile:menu"),
+            ("👤 Карточка клиента", "profile:menu"),
             ("ℹ️ Помощь", "profile:help"),
         ],
     }
