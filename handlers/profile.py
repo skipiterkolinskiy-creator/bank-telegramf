@@ -4,15 +4,12 @@ from aiogram import Bot, F, Router
 from aiogram.types import CallbackQuery
 
 from keyboards.menu import back_main
+from utils.bank_format import account_tail, money
 from utils.database import Database
 from utils.ui import answer_callback, replace_menu
 
 
 router = Router()
-
-
-def money(value: float) -> str:
-    return f"{value:,.2f}".replace(",", " ")
 
 
 @router.callback_query(F.data == "profile:menu")
@@ -25,6 +22,7 @@ async def profile_card(callback: CallbackQuery, bot: Bot, database: Database) ->
         "👤 <b>Карточка клиента</b>\n\n"
         f"Имя: <b>{user['name']}</b>\n"
         f"Z-ID: <code>{user['passport']}</code>\n"
+        f"Счет: <code>{account_tail(user)}</code>\n"
         f"Telegram ID: <code>{user['telegram_id']}</code>\n"
         f"Username: @{user.get('username') or 'нет'}\n\n"
         f"Баланс RUB: <b>{money(float(balances.get('RUB', 0.0)))} RUB</b>\n"
