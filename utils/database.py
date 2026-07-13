@@ -95,7 +95,7 @@ class Database:
             user = {
                 "telegram_id": telegram_id,
                 "username": username or "",
-                "name": name or "Игрок",
+                "name": name or "Клиент",
                 "passport": self.make_passport(telegram_id),
                 "balances": {"RUB": self.start_balance, "USD": 0.0, "EUR": 0.0},
                 "roles": [],
@@ -113,7 +113,24 @@ class Database:
             }
         else:
             user["username"] = username or user.get("username", "")
-            user["name"] = name or user.get("name", "Игрок")
+            user["name"] = name or user.get("name", "Клиент")
+            user.setdefault("telegram_id", telegram_id)
+            user.setdefault("passport", self.make_passport(telegram_id))
+            user.setdefault("balances", {})
+            user["balances"].setdefault("RUB", self.start_balance)
+            user["balances"].setdefault("USD", 0.0)
+            user["balances"].setdefault("EUR", 0.0)
+            user.setdefault("roles", [])
+            user.setdefault("status", {"banned": False, "wanted": False, "alive": True})
+            user.setdefault("stats", {})
+            user["stats"].setdefault("transfers", 0)
+            user["stats"].setdefault("received", 0.0)
+            user["stats"].setdefault("spent", 0.0)
+            user["stats"].setdefault("casino_wins", 0)
+            user["stats"].setdefault("casino_losses", 0)
+            user["stats"].setdefault("donated", 0.0)
+            user.setdefault("created_at", self.now())
+            user.setdefault("last_menu_message_id", None)
         users[key] = user
         self.write("users", users)
         self.ensure_user_files(telegram_id)
@@ -247,7 +264,7 @@ class Database:
             users[raw_id] = {
                 "telegram_id": telegram_id,
                 "username": payload.get("username", ""),
-                "name": payload.get("first_name") or payload.get("name") or "Игрок",
+                "name": payload.get("first_name") or payload.get("name") or "Клиент",
                 "passport": self.make_passport(telegram_id),
                 "balances": {
                     "RUB": float(payload.get("balance", self.start_balance)),
