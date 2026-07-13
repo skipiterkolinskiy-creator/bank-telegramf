@@ -8,6 +8,7 @@ from aiogram.fsm.state import State, StatesGroup
 from aiogram.types import CallbackQuery, Message
 
 from keyboards.menu import back_main
+from utils.bank_format import merchant_credit_notice, merchant_debit_notice
 from utils.database import Database
 from utils.logger import log_action
 from utils.ui import answer_callback, replace_menu
@@ -57,10 +58,12 @@ async def casino_bet(message: Message, bot: Bot, database: Database, state: FSMC
         profile["balances"]["RUB"] += profit
         profile["stats"]["casino_wins"] += 1
         text = f"🎲 Выпало <b>{roll}</b>\n\n✅ Победа! Вы выиграли <b>{profit:,.2f} RUB</b>."
+        notice_text = merchant_credit_notice(profile, 'ООО "Тмыв"', profit)
     else:
         profile["balances"]["RUB"] -= bet
         profile["stats"]["casino_losses"] += 1
         text = f"🎲 Выпало <b>{roll}</b>\n\n❌ Проигрыш. Ставка <b>{bet:,.2f} RUB</b> списана."
+        notice_text = merchant_debit_notice(profile, 'ООО "Тмыв"', bet)
     users[str(message.from_user.id)] = profile
     casino.setdefault("games", []).append({
         "telegram_id": message.from_user.id,
@@ -72,5 +75,9 @@ async def casino_bet(message: Message, bot: Bot, database: Database, state: FSMC
     database.write("users", users)
     database.write("casino", casino)
     log_action(database, message.from_user.id, "casino_game", bet=bet, roll=roll, won=won)
+    try:
+        await bot.send_message(message.from_user.id, notice_text)
+    except Exception as error:
+        log_action(database, message.from_user.id, "dm_casino_notice_failed", error=str(error))
     await state.clear()
     await replace_menu(bot, database, message.chat.id, message.from_user.id, text.replace(",", " "), back_main())
