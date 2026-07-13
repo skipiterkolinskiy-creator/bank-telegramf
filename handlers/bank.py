@@ -29,12 +29,14 @@ async def balance(callback: CallbackQuery, bot: Bot, database: Database) -> None
     await answer_callback(callback)
     user = database.upsert_user(callback.from_user.id, callback.from_user.username, callback.from_user.full_name)
     text = (
-        "🏦 <b>Баланс</b>\n\n"
+        "🏦 <b>Мой счет</b>\n\n"
         f"Имя: <b>{user['name']}</b>\n"
-        f"Баланс: <b>{money(user['balances']['RUB'])} RUB</b>\n"
+        f"Баланс RUB: <b>{money(user['balances']['RUB'])} RUB</b>\n"
+        f"USD: <b>{money(float(user['balances'].get('USD', 0.0)))}</b>\n"
+        f"EUR: <b>{money(float(user['balances'].get('EUR', 0.0)))}</b>\n"
         f"Telegram ID: <code>{user['telegram_id']}</code>\n"
         f"Username: @{user['username'] or 'нет'}\n"
-        f"Паспорт: <code>{user['passport']}</code>"
+        f"Z-ID: <code>{user['passport']}</code>"
     )
     await replace_menu(bot, database, callback.message.chat.id, callback.from_user.id, text, balance_menu())
 
@@ -48,7 +50,7 @@ async def transfer_start(callback: CallbackQuery, bot: Bot, database: Database, 
         database,
         callback.message.chat.id,
         callback.from_user.id,
-        "💸 <b>Перевод денег</b>\n\nВведите Telegram ID, username, ник или паспорт игрока.",
+        "💸 <b>Перевод денег</b>\n\nВведите Telegram ID, username, имя или Z-ID клиента.",
         back_main("bank:balance"),
     )
 
@@ -59,15 +61,15 @@ async def transfer_search(message: Message, bot: Bot, database: Database, state:
         return
     matches = [user for user in database.find_users(message.text) if user["telegram_id"] != message.from_user.id]
     if not matches:
-        await replace_menu(bot, database, message.chat.id, message.from_user.id, "Игрок не найден. Попробуйте другой запрос.", back_main())
+        await replace_menu(bot, database, message.chat.id, message.from_user.id, "Клиент не найден. Попробуйте другой запрос.", back_main())
         return
     target = matches[0]
     await state.update_data(target_id=target["telegram_id"])
     text = (
-        "🔍 <b>Найден игрок</b>\n\n"
+        "🔍 <b>Клиент найден</b>\n\n"
         f"Имя: <b>{target['name']}</b>\n"
         f"Username: @{target['username'] or 'нет'}\n"
-        f"Паспорт: <code>{target['passport']}</code>"
+        f"Z-ID: <code>{target['passport']}</code>"
     )
     await replace_menu(bot, database, message.chat.id, message.from_user.id, text, transfer_target(target["telegram_id"]))
 
@@ -96,7 +98,7 @@ async def transfer_amount_entered(message: Message, bot: Bot, database: Database
     if not target or amount <= 0:
         await replace_menu(bot, database, message.chat.id, message.from_user.id, "Перевод невозможен.", back_main())
         return
-    text = f"Подтвердите перевод <b>{money(amount)} RUB</b> игроку <b>{target['name']}</b>."
+    text = f"Подтвердите перевод <b>{money(amount)} RUB</b> клиенту <b>{target['name']}</b>."
     await replace_menu(bot, database, message.chat.id, message.from_user.id, text, confirm_transfer(target_id, amount))
 
 
