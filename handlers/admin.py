@@ -7,6 +7,7 @@ from aiogram.types import CallbackQuery, Message
 
 from config import Config
 from keyboards.admin import admin_panel, money_actions, player_card
+from utils.bank_format import merchant_credit_notice, merchant_debit_notice
 from utils.database import Database
 from utils.logger import log_action
 from utils.ui import answer_callback, replace_menu
@@ -204,14 +205,20 @@ async def admin_money(message: Message, bot: Bot, database: Database, state: FSM
         player["balances"]["RUB"] += amount
         action = "admin_give_money"
         result = f"✅ Баланс пополнен на <b>{amount:,.2f} RUB</b>. Клиент: <b>{player['name']}</b>."
+        notice_text = merchant_credit_notice(player, "Z-Bank", amount)
     else:
         player["balances"]["RUB"] = max(0.0, player["balances"]["RUB"] - amount)
         action = "admin_remove_money"
         result = f"✅ С баланса списано <b>{amount:,.2f} RUB</b>. Клиент: <b>{player['name']}</b>."
+        notice_text = merchant_debit_notice(player, "Z-Bank", amount)
 
     users[str(target_id)] = player
     database.write("users", users)
     log_action(database, message.from_user.id, action, target_id=target_id, amount=amount)
+    try:
+        await bot.send_message(target_id, notice_text)
+    except Exception as error:
+        log_action(database, message.from_user.id, "dm_admin_money_notice_failed", target_id=target_id, error=str(error))
     await state.clear()
     await replace_menu(bot, database, message.chat.id, message.from_user.id, result.replace(",", " "), player_card(target_id))
 
