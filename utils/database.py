@@ -152,19 +152,29 @@ class Database:
 
     def find_users(self, query: str) -> list[JsonDict]:
         query_clean = query.strip().lower().removeprefix("@")
+        zid_query = query_clean.replace(" ", "").replace("-", "")
         if not query_clean:
             return []
         result = []
         for user in self.read("users").values():
+            passport = str(user.get("passport", ""))
+            passport_clean = passport.lower().replace("-", "")
             fields = [
                 str(user.get("telegram_id", "")),
-                str(user.get("passport", "")),
+                passport.lower(),
+                passport_clean,
                 str(user.get("username", "")).lower(),
                 str(user.get("name", "")).lower(),
             ]
-            if any(query_clean in field for field in fields):
+            if any(query_clean in field for field in fields) or zid_query == passport_clean:
                 result.append(user)
         return result[:10]
+
+    def is_zid_query(self, query: str, user: JsonDict) -> bool:
+        query_clean = query.strip().lower().replace(" ", "").replace("-", "")
+        passport_clean = str(user.get("passport", "")).lower().replace("-", "")
+        passport_number = passport_clean.removeprefix("zb")
+        return bool(query_clean and query_clean in {passport_clean, passport_number})
 
     def transfer(self, sender_id: int, receiver_id: int, amount: float) -> bool:
         users = self.read("users")
