@@ -1,3 +1,158 @@
 {
-  "games": []
+  "games": [
+    {
+      "telegram_id": 5380882690,
+      "bet": 2678.0,
+      "roll": 6,
+      "won": true,
+      "created_at": "2026-07-13T22:53:33.841837+00:00"
+    },
+    {
+      "telegram_id": 5380882690,
+      "bet": 4000.0,
+      "roll": 3,
+      "won": false,
+      "created_at": "2026-07-13T22:53:53.136174+00:00"
+    },
+    {
+      "telegram_id": 5380882690,
+      "bet": 5000.0,
+      "roll": 5,
+      "won": true,
+      "created_at": "2026-07-13T22:54:07.626572+00:00"
+    },
+    {
+      "telegram_id": 5380882690,
+      "bet": 5000.0,
+      "roll": 3,
+      "won": false,
+      "created_at": "2026-07-13T22:54:22.106108+00:00"
+    },
+    {
+      "telegram_id": 5380882690,
+      "bet": 5000.0,
+      "roll": 5,
+      "won": true,
+      "created_at": "2026-07-13T22:54:31.266894+00:00"
+    },
+    {
+      "telegram_id": 5380882690,
+      "bet": 6000.0,
+      "roll": 4,
+      "won": true,
+      "created_at": "2026-07-13T22:54:37.910134+00:00"
+    },
+    {
+      "telegram_id": 5380882690,
+      "bet": 9000.0,
+      "roll": 2,
+      "won": false,
+      "created_at": "2026-07-13T22:57:06.273725+00:00"
+    },
+    {
+      "telegram_id": 5380882690,
+      "bet": 9000.0,
+      "roll": 2,
+      "won": false,
+      "created_at": "2026-07-13T22:57:13.089043+00:00"
+    },
+    {
+      "telegram_id": 5380882690,
+      "bet": 1000.0,
+      "roll": 3,
+      "won": false,
+      "created_at": "2026-07-13T22:57:20.390064+00:00"
+    },
+    {
+      "telegram_id": 5380882690,
+      "bet": 418.0,
+      "roll": 3,
+      "won": false,
+      "created_at": "2026-07-13T22:57:36.588147+00:00"
+    },
+    {
+      "telegram_id": 7772767505,
+      "bet": 1000.0,
+      "roll": 3,
+      "won": false,
+      "created_at": "2026-07-13T23:32:52.454518+00:00"
+    },
+    {
+      "telegram_id": 8548608434,
+      "bet": 1.0,
+      "roll": 3,
+      "won": false,
+      "created_at": "2026-07-14T02:09:44.137200+00:00"
+    },
+    {
+      "telegram_id": 7338030442,
+      "bet": 500.0,
+      "roll": 3,
+      "won": false,
+      "created_at": "2026-07-14T03:55:51.916916+00:00"
+    },
+    {
+      "telegram_id": 7338030442,
+      "bet": 500.0,
+      "roll": 4,
+      "won": true,
+      "created_at": "2026-07-14T03:56:06.663913+00:00"
+    },
+    {
+      "telegram_id": 7338030442,
+      "bet": 1.0,
+      "roll": 6,
+      "won": true,
+      "created_at": "2026-07-14T03:56:38.644125+00:00"
+    },
+    {
+      "telegram_id": 7338030442,
+      "bet": 1.0,
+      "roll": 2,
+      "won": false,
+      "created_at": "2026-07-14T03:56:54.751456+00:00"
+    },
+    {
+      "telegram_id": 7338030442,
+      "bet": 500.0,
+      "roll": 4,
+      "won": true,
+      "created_at": "2026-07-14T03:57:09.163367+00:00"
+    },
+    {
+      "telegram_id": 7338030442,
+      "bet": 500.0,
+      "roll": 1,
+      "won": false,
+      "created_at": "2026-07-14T03:57:22.458672+00:00"
+    },
+    {
+      "telegram_id": 7338030442,
+      "bet": 1000.0,
+      "roll": 3,
+      "won": false,
+      "created_at": "2026-07-14T03:57:39.520412+00:00"
+    },
+    {
+      "telegram_id": 7330689401,
+      "bet": 10.0,
+      "roll": 4,
+      "won": true,
+      "created_at": "2026-07-14T05:38:56.685190+00:00"
+    },
+    {
+      "telegram_id": 1453946666,
+      "bet": 100.0,
+      "roll": 2,
+      "won": false,
+      "created_at": "2026-07-14T12:17:50.104512+00:00"
+    },
+    {
+      "telegram_id": 7730914837,
+      "bet": 10000.0,
+      "roll": 4,
+      "won": true,
+      "created_at": "2026-07-14T12:20:51.903129+00:00"
+    }
+  ]
 }

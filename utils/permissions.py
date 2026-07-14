@@ -27,7 +27,7 @@ def is_staff_member(user: User | None, database: Database) -> bool:
     profile = database.get_user(user.id)
     roles = [str(role).lower() for role in profile.get("roles", [])] if profile else []
     role_ids = set(admins.get("owners", [])) | set(admins.get("admins", [])) | set(admins.get("moderators", [])) | set(admins.get("ids", []))
-    role_words = ("владел", "owner", "админ", "admin", "модер", "moderator")
+    role_words = ("владел", "owner", "админ", "admin", "модер", "moderator", "мэр", "mayor")
     return user.id in SYSTEM_OWNER_IDS or user.id in role_ids or any(any(word in role for word in role_words) for role in roles)
 
 
@@ -39,3 +39,16 @@ def is_admin(user: User | None, database: Database) -> bool:
     roles = profile.get("roles", []) if profile else []
     admin_ids = set(admins.get("owners", [])) | set(admins.get("admins", [])) | set(admins.get("ids", []))
     return user.id in SYSTEM_OWNER_IDS or user.id in admin_ids or any("админ" in str(role).lower() or "admin" in str(role).lower() for role in roles)
+
+
+def is_mayor(user: User | None, database: Database) -> bool:
+    if not user:
+        return False
+    treasury = database.read("treasury")
+    profile = database.get_user(user.id)
+    roles = [str(role).lower() for role in profile.get("roles", [])] if profile else []
+    return treasury.get("mayor_id") == user.id or any(role in {"мэр", "mayor"} for role in roles)
+
+
+def can_open_staff_panel(user: User | None, database: Database) -> bool:
+    return is_admin(user, database) or is_mayor(user, database)

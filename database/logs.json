@@ -1,1 +1,465 @@
-[]
+[
+  {
+    "id": 1,
+    "actor_id": 1453946666,
+    "action": "treasury_donate",
+    "meta": {
+      "amount": 10.0,
+      "success": true
+    },
+    "created_at": "2026-07-13T21:22:43.585513+00:00"
+  },
+  {
+    "id": 2,
+    "actor_id": 8548608434,
+    "action": "money_transfer",
+    "meta": {
+      "target_id": 1453946666,
+      "amount": 10.0
+    },
+    "created_at": "2026-07-13T21:23:08.928941+00:00"
+  },
+  {
+    "id": 3,
+    "actor_id": 8548608434,
+    "action": "money_transfer",
+    "meta": {
+      "target_id": 1453946666,
+      "amount": 10.0
+    },
+    "created_at": "2026-07-13T21:23:45.206030+00:00"
+  },
+  {
+    "id": 4,
+    "actor_id": 1453946666,
+    "action": "admin_give_money",
+    "meta": {
+      "target_id": 5380882690,
+      "amount": 8740.0
+    },
+    "created_at": "2026-07-13T21:41:56.208336+00:00"
+  },
+  {
+    "id": 5,
+    "actor_id": 1453946666,
+    "action": "admin_give_money",
+    "meta": {
+      "target_id": 7447317979,
+      "amount": 122701.0
+    },
+    "created_at": "2026-07-13T21:44:07.076228+00:00"
+  },
+  {
+    "id": 6,
+    "actor_id": 7447317979,
+    "action": "money_transfer",
+    "meta": {
+      "target_id": 1453946666,
+      "amount": 30000.0
+    },
+    "created_at": "2026-07-13T21:56:11.009927+00:00"
+  },
+  {
+    "id": 7,
+    "actor_id": 1453946666,
+    "action": "money_transfer",
+    "meta": {
+      "target_id": 7447317979,
+      "amount": 30000.0
+    },
+    "created_at": "2026-07-13T21:56:52.920718+00:00"
+  },
+  {
+    "id": 8,
+    "actor_id": 1453946666,
+    "action": "admin_toggle_review",
+    "meta": {
+      "target_id": 1453946666
+    },
+    "created_at": "2026-07-13T21:58:43.063026+00:00"
+  },
+  {
+    "id": 9,
+    "actor_id": 1453946666,
+    "action": "admin_toggle_review",
+    "meta": {
+      "target_id": 1453946666,
+      "value": false
+    },
+    "created_at": "2026-07-13T21:58:47.152350+00:00"
+  },
+  {
+    "id": 10,
+    "actor_id": 1453946666,
+    "action": "admin_toggle_access",
+    "meta": {
+      "target_id": 1453946666,
+      "value": false
+    },
+    "created_at": "2026-07-13T21:58:53.049613+00:00"
+  },
+  {
+    "id": 11,
+    "actor_id": 1453946666,
+    "action": "admin_toggle_access",
+    "meta": {
+      "target_id": 1453946666,
+      "value": true
+    },
+    "created_at": "2026-07-13T21:58:56.645270+00:00"
+  },
+  {
+    "id": 12,
+    "actor_id": 1453946666,
+    "action": "admin_give_money",
+    "meta": {
+      "target_id": 8652530502,
+      "amount": 8624.0
+    },
+    "created_at": "2026-07-13T22:00:56.107344+00:00"
+  },
+  {
+    "id": 13,
+    "actor_id": 1453946666,
+    "action": "admin_give_money",
+    "meta": {
+      "target_id": 8571060247,
+      "amount": 2531599.0
+    },
+    "created_at": "2026-07-13T22:01:58.145530+00:00"
+  },
+  {
+    "id": 14,
+    "actor_id": 1453946666,
+    "action": "license_exam",
+    "meta": {
+      "license": "car",
+      "correct": 15,
+      "passed": true
+    },
+    "created_at": "2026-07-13T22:33:08.650089+00:00"
+  },
+  {
+    "id": 15,
+    "actor_id": 1453946666,
+    "action": "license_exam",
+    "meta": {
+      "license": "weapon",
+      "correct": 14,
+      "passed": true
+    },
+    "created_at": "2026-07-13T22:35:01.308901+00:00"
+  },
+  {
+    "id": 16,
+    "actor_id": 5380882690,
+    "action": "casino_game",
+    "meta": {
+      "bet": 2678.0,
+      "roll": 6,
+      "won": true
+    },
+    "created_at": "2026-07-13T22:53:33.844156+00:00"
+  },
+  {
+    "id": 17,
+    "actor_id": 5380882690,
+    "action": "casino_game",
+    "meta": {
+      "bet": 4000.0,
+      "roll": 3,
+      "won": false
+    },
+    "created_at": "2026-07-13T22:53:53.137857+00:00"
+  },
+  {
+    "id": 18,
+    "actor_id": 5380882690,
+    "action": "casino_game",
+    "meta": {
+      "bet": 5000.0,
+      "roll": 5,
+      "won": true
+    },
+    "created_at": "2026-07-13T22:54:07.628795+00:00"
+  },
+  {
+    "id": 19,
+    "actor_id": 5380882690,
+    "action": "casino_game",
+    "meta": {
+      "bet": 5000.0,
+      "roll": 3,
+      "won": false
+    },
+    "created_at": "2026-07-13T22:54:22.109008+00:00"
+  },
+  {
+    "id": 20,
+    "actor_id": 5380882690,
+    "action": "casino_game",
+    "meta": {
+      "bet": 5000.0,
+      "roll": 5,
+      "won": true
+    },
+    "created_at": "2026-07-13T22:54:31.269145+00:00"
+  },
+  {
+    "id": 21,
+    "actor_id": 5380882690,
+    "action": "casino_game",
+    "meta": {
+      "bet": 6000.0,
+      "roll": 4,
+      "won": true
+    },
+    "created_at": "2026-07-13T22:54:37.912287+00:00"
+  },
+  {
+    "id": 22,
+    "actor_id": 5380882690,
+    "action": "casino_game",
+    "meta": {
+      "bet": 9000.0,
+      "roll": 2,
+      "won": false
+    },
+    "created_at": "2026-07-13T22:57:06.275959+00:00"
+  },
+  {
+    "id": 23,
+    "actor_id": 5380882690,
+    "action": "casino_game",
+    "meta": {
+      "bet": 9000.0,
+      "roll": 2,
+      "won": false
+    },
+    "created_at": "2026-07-13T22:57:13.091575+00:00"
+  },
+  {
+    "id": 24,
+    "actor_id": 5380882690,
+    "action": "casino_game",
+    "meta": {
+      "bet": 1000.0,
+      "roll": 3,
+      "won": false
+    },
+    "created_at": "2026-07-13T22:57:20.392023+00:00"
+  },
+  {
+    "id": 25,
+    "actor_id": 5380882690,
+    "action": "casino_game",
+    "meta": {
+      "bet": 418.0,
+      "roll": 3,
+      "won": false
+    },
+    "created_at": "2026-07-13T22:57:36.590263+00:00"
+  },
+  {
+    "id": 26,
+    "actor_id": 7772767505,
+    "action": "casino_game",
+    "meta": {
+      "bet": 1000.0,
+      "roll": 3,
+      "won": false
+    },
+    "created_at": "2026-07-13T23:32:52.456626+00:00"
+  },
+  {
+    "id": 27,
+    "actor_id": 8548608434,
+    "action": "casino_game",
+    "meta": {
+      "bet": 1.0,
+      "roll": 3,
+      "won": false
+    },
+    "created_at": "2026-07-14T02:09:44.139817+00:00"
+  },
+  {
+    "id": 28,
+    "actor_id": 7338030442,
+    "action": "casino_game",
+    "meta": {
+      "bet": 500.0,
+      "roll": 3,
+      "won": false
+    },
+    "created_at": "2026-07-14T03:55:51.920151+00:00"
+  },
+  {
+    "id": 29,
+    "actor_id": 7338030442,
+    "action": "casino_game",
+    "meta": {
+      "bet": 500.0,
+      "roll": 4,
+      "won": true
+    },
+    "created_at": "2026-07-14T03:56:06.666148+00:00"
+  },
+  {
+    "id": 30,
+    "actor_id": 7338030442,
+    "action": "casino_game",
+    "meta": {
+      "bet": 1.0,
+      "roll": 6,
+      "won": true
+    },
+    "created_at": "2026-07-14T03:56:38.646014+00:00"
+  },
+  {
+    "id": 31,
+    "actor_id": 7338030442,
+    "action": "casino_game",
+    "meta": {
+      "bet": 1.0,
+      "roll": 2,
+      "won": false
+    },
+    "created_at": "2026-07-14T03:56:54.753541+00:00"
+  },
+  {
+    "id": 32,
+    "actor_id": 7338030442,
+    "action": "casino_game",
+    "meta": {
+      "bet": 500.0,
+      "roll": 4,
+      "won": true
+    },
+    "created_at": "2026-07-14T03:57:09.167893+00:00"
+  },
+  {
+    "id": 33,
+    "actor_id": 7338030442,
+    "action": "casino_game",
+    "meta": {
+      "bet": 500.0,
+      "roll": 1,
+      "won": false
+    },
+    "created_at": "2026-07-14T03:57:22.461817+00:00"
+  },
+  {
+    "id": 34,
+    "actor_id": 7338030442,
+    "action": "casino_game",
+    "meta": {
+      "bet": 1000.0,
+      "roll": 3,
+      "won": false
+    },
+    "created_at": "2026-07-14T03:57:39.523020+00:00"
+  },
+  {
+    "id": 35,
+    "actor_id": 7330689401,
+    "action": "casino_game",
+    "meta": {
+      "bet": 10.0,
+      "roll": 4,
+      "won": true
+    },
+    "created_at": "2026-07-14T05:38:56.687919+00:00"
+  },
+  {
+    "id": 36,
+    "actor_id": 1453946666,
+    "action": "admin_give_money",
+    "meta": {
+      "target_id": 6813134314,
+      "amount": 6966.0
+    },
+    "created_at": "2026-07-14T07:36:29.139392+00:00"
+  },
+  {
+    "id": 37,
+    "actor_id": 1453946666,
+    "action": "admin_give_money",
+    "meta": {
+      "target_id": 7730914837,
+      "amount": 256038.0
+    },
+    "created_at": "2026-07-14T07:37:26.731027+00:00"
+  },
+  {
+    "id": 38,
+    "actor_id": 1453946666,
+    "action": "treasury_donate",
+    "meta": {
+      "amount": 10.0,
+      "success": true
+    },
+    "created_at": "2026-07-14T10:24:32.444537+00:00"
+  },
+  {
+    "id": 39,
+    "actor_id": 1453946666,
+    "action": "casino_game",
+    "meta": {
+      "bet": 100.0,
+      "roll": 2,
+      "won": false
+    },
+    "created_at": "2026-07-14T12:17:50.107262+00:00"
+  },
+  {
+    "id": 40,
+    "actor_id": 7730914837,
+    "action": "casino_game",
+    "meta": {
+      "bet": 10000.0,
+      "roll": 4,
+      "won": true
+    },
+    "created_at": "2026-07-14T12:20:51.906077+00:00"
+  },
+  {
+    "id": 41,
+    "actor_id": 7730914837,
+    "action": "license_issued",
+    "meta": {
+      "license": "car"
+    },
+    "created_at": "2026-07-14T12:22:48.237019+00:00"
+  },
+  {
+    "id": 42,
+    "actor_id": 7730914837,
+    "action": "license_exam",
+    "meta": {
+      "license": "car",
+      "correct": 15,
+      "passed": true
+    },
+    "created_at": "2026-07-14T12:22:48.239571+00:00"
+  },
+  {
+    "id": 43,
+    "actor_id": 1294762236,
+    "action": "admin_give_money",
+    "meta": {
+      "target_id": 1294762236,
+      "amount": 1000000.0
+    },
+    "created_at": "2026-07-14T17:46:04.499466+00:00"
+  },
+  {
+    "id": 44,
+    "actor_id": 1294762236,
+    "action": "dm_admin_money_notice_failed",
+    "meta": {
+      "target_id": 1294762236,
+      "error": "Telegram server says - Forbidden: bot was blocked by the user"
+    },
+    "created_at": "2026-07-14T17:46:04.640034+00:00"
+  }
+]

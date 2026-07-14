@@ -1,1 +1,71 @@
-[]
+[
+  {
+    "id": 1,
+    "kind": "treasury",
+    "from_id": 1453946666,
+    "to_id": null,
+    "amount": 10.0,
+    "meta": {
+      "reason": "donation"
+    },
+    "created_at": "2026-07-13T21:22:43.584997+00:00"
+  },
+  {
+    "id": 2,
+    "kind": "transfer",
+    "from_id": 8548608434,
+    "to_id": 1453946666,
+    "amount": 10.0,
+    "meta": {},
+    "created_at": "2026-07-13T21:23:08.928056+00:00"
+  },
+  {
+    "id": 3,
+    "kind": "transfer",
+    "from_id": 8548608434,
+    "to_id": 1453946666,
+    "amount": 10.0,
+    "meta": {},
+    "created_at": "2026-07-13T21:23:45.205096+00:00"
+  },
+  {
+    "id": 4,
+    "kind": "transfer",
+    "from_id": 7447317979,
+    "to_id": 1453946666,
+    "amount": 30000.0,
+    "meta": {},
+    "created_at": "2026-07-13T21:56:11.008974+00:00"
+  },
+  {
+    "id": 5,
+    "kind": "transfer",
+    "from_id": 1453946666,
+    "to_id": 7447317979,
+    "amount": 30000.0,
+    "meta": {},
+    "created_at": "2026-07-13T21:56:52.919367+00:00"
+  },
+  {
+    "id": 6,
+    "kind": "treasury",
+    "from_id": 1453946666,
+    "to_id": null,
+    "amount": 10.0,
+    "meta": {
+      "reason": "donation"
+    },
+    "created_at": "2026-07-14T10:24:32.443040+00:00"
+  },
+  {
+    "id": 7,
+    "kind": "treasury",
+    "from_id": 7730914837,
+    "to_id": null,
+    "amount": 5000.0,
+    "meta": {
+      "reason": "license_fee:car"
+    },
+    "created_at": "2026-07-14T12:22:48.235557+00:00"
+  }
+]

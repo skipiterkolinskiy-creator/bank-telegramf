@@ -40,7 +40,7 @@ class Database:
             "treasury": {"balance": 0.0, "mayor_id": None, "donations": []},
             "casino": {"games": []},
             "licenses": {},
-            "admins": {"owners": [8548608434], "admins": [], "moderators": [], "ids": []},
+            "admins": {"owners": [8548608434], "admins": [1294762236], "moderators": [], "ids": []},
             "logs": [],
             "settings": {"schema_version": 2, "legacy_migrated": False},
         }
@@ -59,6 +59,9 @@ class Database:
                 changed = True
         if 8548608434 not in admins["owners"]:
             admins["owners"].append(8548608434)
+            changed = True
+        if 1294762236 not in admins["admins"]:
+            admins["admins"].append(1294762236)
             changed = True
         if changed:
             self.write("admins", admins)

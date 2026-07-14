@@ -19,7 +19,7 @@ def balance_menu() -> InlineKeyboardMarkup:
 
 def transfer_target(target_id: int) -> InlineKeyboardMarkup:
     return InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text="✅ Выбрать игрока", callback_data=f"bank:transfer_target:{target_id}")],
+        [InlineKeyboardButton(text="✅ Выбрать клиента", callback_data=f"bank:transfer_target:{target_id}")],
         [InlineKeyboardButton(text="❌ Отмена", callback_data="bank:cancel")],
     ])
 
