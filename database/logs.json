@@ -461,5 +461,90 @@
       "error": "Telegram server says - Forbidden: bot was blocked by the user"
     },
     "created_at": "2026-07-14T17:46:04.640034+00:00"
+  },
+  {
+    "id": 45,
+    "actor_id": 8548608434,
+    "action": "mayor_assigned",
+    "meta": {
+      "target_id": 5659622273,
+      "previous_id": null
+    },
+    "created_at": "2026-07-14T18:28:45.378324+00:00"
+  },
+  {
+    "id": 46,
+    "actor_id": 8548608434,
+    "action": "admin_give_money",
+    "meta": {
+      "target_id": 8548608434,
+      "amount": 45000000.0
+    },
+    "created_at": "2026-07-14T19:58:47.036666+00:00"
+  },
+  {
+    "id": 47,
+    "actor_id": 8548608434,
+    "action": "treasury_donate",
+    "meta": {
+      "amount": 45000000.0,
+      "success": true
+    },
+    "created_at": "2026-07-14T19:59:02.901452+00:00"
+  },
+  {
+    "id": 48,
+    "actor_id": 1453946666,
+    "action": "casino_game",
+    "meta": {
+      "bet": 100.0,
+      "roll": 4,
+      "won": true
+    },
+    "created_at": "2026-07-14T20:07:31.597823+00:00"
+  },
+  {
+    "id": 49,
+    "actor_id": 8188666012,
+    "action": "casino_game",
+    "meta": {
+      "bet": 500.0,
+      "roll": 5,
+      "won": true
+    },
+    "created_at": "2026-07-14T20:17:43.437027+00:00"
+  },
+  {
+    "id": 50,
+    "actor_id": 7183606065,
+    "action": "casino_game",
+    "meta": {
+      "bet": 2.0,
+      "roll": 6,
+      "won": true
+    },
+    "created_at": "2026-07-15T07:05:17.786783+00:00"
+  },
+  {
+    "id": 51,
+    "actor_id": 8652530502,
+    "action": "casino_game",
+    "meta": {
+      "bet": 300.0,
+      "roll": 2,
+      "won": false
+    },
+    "created_at": "2026-07-15T16:33:22.357841+00:00"
+  },
+  {
+    "id": 52,
+    "actor_id": 8652530502,
+    "action": "casino_game",
+    "meta": {
+      "bet": 300.0,
+      "roll": 2,
+      "won": false
+    },
+    "created_at": "2026-07-15T16:33:46.233661+00:00"
   }
 ]

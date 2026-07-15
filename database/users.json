@@ -18,13 +18,13 @@
     "stats": {
       "transfers": 2,
       "received": 0.0,
-      "spent": 20.0,
+      "spent": 45000020.0,
       "casino_wins": 0,
       "casino_losses": 1,
-      "donated": 0.0
+      "donated": 45000000.0
     },
     "created_at": "2026-07-13T21:21:38.941531+00:00",
-    "last_menu_message_id": 864
+    "last_menu_message_id": 759
   },
   "1453946666": {
     "telegram_id": 1453946666,
@@ -32,7 +32,7 @@
     "name": "nakamura",
     "passport": "ZB-946666",
     "balances": {
-      "RUB": 900.0,
+      "RUB": 1000.0,
       "USD": 0.0,
       "EUR": 0.0
     },
@@ -46,12 +46,12 @@
       "transfers": 4,
       "received": 30020.0,
       "spent": 30020.0,
-      "casino_wins": 0,
+      "casino_wins": 1,
       "casino_losses": 1,
       "donated": 20.0
     },
     "created_at": "2026-07-13T21:22:14.421444+00:00",
-    "last_menu_message_id": 930
+    "last_menu_message_id": 753
   },
   "7449918499": {
     "telegram_id": 7449918499,
@@ -113,7 +113,7 @@
     "name": "woolec",
     "passport": "ZB-530502",
     "balances": {
-      "RUB": 9624.0,
+      "RUB": 9024.0,
       "USD": 0.0,
       "EUR": 0.0
     },
@@ -128,11 +128,11 @@
       "received": 0.0,
       "spent": 0.0,
       "casino_wins": 0,
-      "casino_losses": 0,
+      "casino_losses": 2,
       "donated": 0.0
     },
     "created_at": "2026-07-13T21:33:16.658225+00:00",
-    "last_menu_message_id": 684
+    "last_menu_message_id": 814
   },
   "7447317979": {
     "telegram_id": 7447317979,
@@ -267,7 +267,7 @@
       "donated": 0.0
     },
     "created_at": "2026-07-13T21:40:25.818348+00:00",
-    "last_menu_message_id": 938
+    "last_menu_message_id": 761
   },
   "8571060247": {
     "telegram_id": 8571060247,
@@ -333,7 +333,9 @@
       "USD": 0.0,
       "EUR": 0.0
     },
-    "roles": [],
+    "roles": [
+      "мэр"
+    ],
     "status": {
       "banned": false,
       "wanted": false,
@@ -352,8 +354,8 @@
   },
   "7772767505": {
     "telegram_id": 7772767505,
-    "username": "vershachh",
-    "name": "гамбио легит",
+    "username": "kitaet_legit",
+    "name": "китает legit",
     "passport": "ZB-767505",
     "balances": {
       "RUB": 0.0,
@@ -375,7 +377,7 @@
       "donated": 0.0
     },
     "created_at": "2026-07-13T22:44:27.062488+00:00",
-    "last_menu_message_id": 385
+    "last_menu_message_id": 690
   },
   "8711105399": {
     "telegram_id": 8711105399,
@@ -456,7 +458,7 @@
       "donated": 5000.0
     },
     "created_at": "2026-07-14T04:10:59.981284+00:00",
-    "last_menu_message_id": 672
+    "last_menu_message_id": 763
   },
   "5295229940": {
     "telegram_id": 5295229940,
@@ -483,7 +485,7 @@
       "donated": 0.0
     },
     "created_at": "2026-07-14T05:08:29.907927+00:00",
-    "last_menu_message_id": 483
+    "last_menu_message_id": 775
   },
   "7330689401": {
     "telegram_id": 7330689401,
@@ -591,7 +593,7 @@
       "donated": 0.0
     },
     "created_at": "2026-07-14T10:53:22.090690+00:00",
-    "last_menu_message_id": 527
+    "last_menu_message_id": 768
   },
   "760217595": {
     "telegram_id": 760217595,
@@ -646,5 +648,113 @@
     },
     "created_at": "2026-07-14T14:01:10.786608+00:00",
     "last_menu_message_id": 674
+  },
+  "8188666012": {
+    "telegram_id": 8188666012,
+    "username": "sherk722",
+    "name": "kokoshka",
+    "passport": "ZB-666012",
+    "balances": {
+      "RUB": 1500.0,
+      "USD": 0.0,
+      "EUR": 0.0
+    },
+    "roles": [],
+    "status": {
+      "banned": false,
+      "wanted": false,
+      "alive": true
+    },
+    "stats": {
+      "transfers": 0,
+      "received": 0.0,
+      "spent": 0.0,
+      "casino_wins": 1,
+      "casino_losses": 0,
+      "donated": 0.0
+    },
+    "created_at": "2026-07-14T20:15:15.614881+00:00",
+    "last_menu_message_id": 714
+  },
+  "7200720507": {
+    "telegram_id": 7200720507,
+    "username": "NexPlayPVP",
+    "name": "Некс",
+    "passport": "ZB-720507",
+    "balances": {
+      "RUB": 1000.0,
+      "USD": 0.0,
+      "EUR": 0.0
+    },
+    "roles": [],
+    "status": {
+      "banned": false,
+      "wanted": false,
+      "alive": true
+    },
+    "stats": {
+      "transfers": 0,
+      "received": 0.0,
+      "spent": 0.0,
+      "casino_wins": 0,
+      "casino_losses": 0,
+      "donated": 0.0
+    },
+    "created_at": "2026-07-14T22:07:01.498075+00:00",
+    "last_menu_message_id": 719
+  },
+  "7183606065": {
+    "telegram_id": 7183606065,
+    "username": "npo_cmo10",
+    "name": "MOR_CME2",
+    "passport": "ZB-606065",
+    "balances": {
+      "RUB": 1002.0,
+      "USD": 0.0,
+      "EUR": 0.0
+    },
+    "roles": [],
+    "status": {
+      "banned": false,
+      "wanted": false,
+      "alive": true
+    },
+    "stats": {
+      "transfers": 0,
+      "received": 0.0,
+      "spent": 0.0,
+      "casino_wins": 1,
+      "casino_losses": 0,
+      "donated": 0.0
+    },
+    "created_at": "2026-07-15T07:04:31.770811+00:00",
+    "last_menu_message_id": 743
+  },
+  "8647089641": {
+    "telegram_id": 8647089641,
+    "username": "MettatonOriginal",
+    "name": "MettatonOriginal 😏",
+    "passport": "ZB-089641",
+    "balances": {
+      "RUB": 1000.0,
+      "USD": 0.0,
+      "EUR": 0.0
+    },
+    "roles": [],
+    "status": {
+      "banned": false,
+      "wanted": false,
+      "alive": true
+    },
+    "stats": {
+      "transfers": 0,
+      "received": 0.0,
+      "spent": 0.0,
+      "casino_wins": 0,
+      "casino_losses": 0,
+      "donated": 0.0
+    },
+    "created_at": "2026-07-15T11:23:28.746141+00:00",
+    "last_menu_message_id": 757
   }
 }
